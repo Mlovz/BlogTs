@@ -1,6 +1,30 @@
+.field {
+  width: 100%;
+  position: relative;
+}
 .input{
   border-radius: 5px;
   background: #E8E8E8;
   padding: 13px 15px;
   width: 100%;
+}
+
+.error{
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+}
+
+.show{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 3px;
+  border-radius: 4px;
+  background: #7e7e7e;
+  color: #fff;
+  cursor: pointer;
 }

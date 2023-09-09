@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4649114-0dc7-45d7-a46d-966466229864" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Input/Input.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Text/Text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Text/Text.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/LoginPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/RegisterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/RegisterPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/auth.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/auth.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694189951736</updated>
       <workItem from="1694189952761" duration="5968000" />
-      <workItem from="1694252374470" duration="11186000" />
+      <workItem from="1694252374470" duration="14811000" />
     </task>
     <servers />
   </component>

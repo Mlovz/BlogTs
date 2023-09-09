@@ -13,6 +13,7 @@ interface TextProps{
     size?: SizesType
     fw?: FwType,
     color?: ColorTypes
+    className?: string
 }
 
 const Text:FC<TextProps> = (
@@ -21,7 +22,8 @@ const Text:FC<TextProps> = (
         as='h2',
         size= 24,
         fw= 700,
-        color = 'default'
+        color = 'default',
+        className = ''
     }) => {
 
     const sizeClasses: Record<SizesType, string> = {
@@ -43,10 +45,10 @@ const Text:FC<TextProps> = (
 
 
     const getTag: Record<AsTypes, JSX.Element> = {
-        'h2': <h2 className={`${sizeClasses[size]} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</h2>,
-        'h1': <h1 className={`${sizeClasses[size]} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</h1>,
-        'span': <span className={`${sizeClasses[size]} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</span>,
-        'p': <p className={`${sizeClasses[size]} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</p>,
+        'h2': <h2 className={`${sizeClasses[size]} ${className} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</h2>,
+        'h1': <h1 className={`${sizeClasses[size]} ${className} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</h1>,
+        'span': <span className={`${sizeClasses[size]} ${className} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</span>,
+        'p': <p className={`${sizeClasses[size]} ${className} ${fwClasses[fw]} ${colorClasses[color]}`}>{children}</p>,
     }
 
     return getTag[as]

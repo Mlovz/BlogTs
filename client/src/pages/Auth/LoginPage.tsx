@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import cls from './auth.module.scss'
 import {Button, Card, Input, Text} from "../../components";
+import {AuthStateUserData} from "../../utils/typescript";
 const LoginPage = () => {
+
+    const [userData, setUserData] = useState<AuthStateUserData>({
+        username: '',
+        password: '',
+    })
+
     return (
         <div className={cls.auth}>
             <Card className={cls.authCard}>
