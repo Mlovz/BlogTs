@@ -1,5 +1,6 @@
 import cls from './Header.module.scss'
 import {Link} from 'react-router-dom'
+import {Button} from "../index";
 
 
 const Header = () => {
@@ -11,8 +12,8 @@ const Header = () => {
 
 
                     <div className={cls.headerRight}>
-                        <Link to="/login">Войти</Link>
-                        <Link to="/register">Регистрация</Link>
+                        <Button to='/login'>Войти</Button>
+                        <Button to='/register' variant='outline'>Регистрация</Button>
                     </div>
 
                 </div>
