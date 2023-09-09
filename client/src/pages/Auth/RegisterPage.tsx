@@ -3,6 +3,8 @@ import cls from './auth.module.scss'
 import {Button, Card, Input, Text} from "../../components";
 import {AuthStateUserData} from "../../utils/typescript";
 import {validAuthData} from "../../utils/valid";
+import axios from 'axios'
+
 const RegisterPage = () => {
     const [userData, setUserData] = useState<AuthStateUserData>({
         "username": '',
@@ -20,19 +22,24 @@ const RegisterPage = () => {
         setUserData({...userData, [e.target.name]: e.target.value})
     }
 
-    const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const onSubmit = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         const errors: any = validAuthData(userData)
 
-        if(errors){
+        if(errors.status !== 200){
             return setErrors(errors)
         }
 
+        delete userData.cf_password
+
+        try {
+            const res = await axios.post('http://localhost:5000/api/register', userData)
+        }catch (err:any){
+            console.log(err.response.data.message)
+        }
+
     }
-
-
-    console.log(errors)
 
 
     return (

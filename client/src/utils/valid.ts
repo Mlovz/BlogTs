@@ -23,7 +23,7 @@ export const validAuthData = (userData: AuthStateUserData) => {
             ...errors,
             password: 'Минимум 6 символов.'
         }
-    }else if(password !== cf_password){
+    }else if(cf_password && password !== cf_password){
         return {
             ...errors,
             cf_password: 'Пароли не совпадают.'
@@ -34,6 +34,7 @@ export const validAuthData = (userData: AuthStateUserData) => {
     return {
         username: '',
         password: '',
-        cf_password: ''
+        cf_password: '',
+        status: 200
     }
 }
