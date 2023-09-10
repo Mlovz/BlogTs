@@ -3,7 +3,10 @@ import cls from './auth.module.scss'
 import {Button, Card, Input, Text} from "../../components";
 import {AuthStateUserData} from "../../utils/typescript";
 import {validAuthData} from "../../utils/valid";
-import axios from "axios";
+import {useDispatch, useSelector} from "react-redux";
+import {login} from "../../redux/actions/authAction";
+import {StateSchema, useAppDispatch} from "../../redux/store";
+import {getAuthError} from "../../redux/selectors/auth/getAuthError";
 const LoginPage = () => {
     const [userData, setUserData] = useState<AuthStateUserData>({
         username: '',
@@ -16,6 +19,8 @@ const LoginPage = () => {
         cf_password: ''
     })
 
+    const dispatch = useAppDispatch()
+    const authError = useSelector(getAuthError)
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setUserData({...userData, [e.target.name]: e.target.value})
@@ -26,24 +31,18 @@ const LoginPage = () => {
 
         const errors: any = validAuthData(userData)
 
-        console.log(errors)
-
         if(errors.status !== 200){
             return setErrors(errors)
         }
 
-        try {
-            const res = await axios.post('http://localhost:5000/api/login', userData)
-            console.log(res)
-        }catch (err:any){
-            console.log(err.response.data.message)
-        }
+        dispatch(login(userData))
     }
 
     return (
         <div className={cls.auth}>
             <Card className={cls.authCard}>
                 <Text>Войти</Text>
+                {authError && <Text as='span' size={12} fw={500} color='solid' >{authError}</Text>}
                 <form noValidate className={cls.authForm} onSubmit={onSubmit}>
                     <Input
                         placeholder='Username'

@@ -1,24 +1,23 @@
-import {Header} from "./components";
+import {Header, Loading} from "./components";
 import {router} from "./components/router";
 import {useSelector, useDispatch} from 'react-redux'
+import {useAppDispatch} from "./redux/store";
+import {useEffect} from "react";
+import {refreshToken} from "./redux/actions/authAction";
 
 function App() {
-    const state:any = useSelector(state => state)
-    const dispatch = useDispatch()
+    const state: any = useSelector(state => state)
+    const dispatch = useAppDispatch()
 
 
-    const editName = () => {
-        dispatch({type: 'EDIT', payload: 'Test'})
-    }
-
-
+    useEffect(() => {
+        dispatch(refreshToken())
+    },[dispatch])
 
     return (
         <div className="App">
-            <Header/>
-
-
-            <button onClick={editName}>Edit</button>
+            <Header />
+            <Loading />
 
             <main>
                 <div className="container">

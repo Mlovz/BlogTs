@@ -74,3 +74,44 @@ export const login = async(req, res) => {
         console.log(err)
     }
 }
+
+export const logout = async(req, res) => {
+    res.clearCookie('refreshToken', {path: '/api/refreshToken'})
+    res.status(200).json({message: 'Логаут'})
+}
+
+export const refreshToken = async (req, res) => {
+    try {
+        const rfToken = req.cookies.refreshToken
+        if(!rfToken) return res.status(400).json({message: 'Пожалуйста войдите!'})
+
+        jwt.verify(rfToken, process.env.REFRESH_TOKEN, async (err, result) => {
+            console.log(result)
+
+            if(err) return res.status(400).json({message: 'Пожалуйста войдите!'})
+
+
+            const user = await UserModel.findOne({_id: result._id})
+
+
+            if(!user) return res.status(400).json({message: 'Нет пользователя!'})
+
+            const accessToken = jwt.sign(
+                {_id: result._id},
+                process.env.ACCESS_TOKEN,
+                {
+                    expiresIn: '1d'
+                }
+            )
+
+            res.status(200).json({
+                message: 'Success',
+                user: {...user._doc, password: ''},
+                accessToken
+            })
+        })
+    }catch (err){
+        return res.status(500).json({message: err.message})
+    }
+
+};
