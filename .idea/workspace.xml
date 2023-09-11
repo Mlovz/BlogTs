@@ -5,22 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4649114-0dc7-45d7-a46d-966466229864" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/selectors/article/getArticleFirstLoad.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Input/Input.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Input/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AddArticlePage/AddArticlePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/AddArticlePage/AddArticlePage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AddArticlePage/AddArticlePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/AddArticlePage/AddArticlePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/RegisterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/RegisterPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/HomePage/HomePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/HomePage/HomePage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/HomePage/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/actions/authAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/actions/authAction.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/authCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/authCtrl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/authRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +111,9 @@
       <workItem from="1694363643903" duration="1552000" />
       <workItem from="1694366538100" duration="138000" />
       <workItem from="1694374364182" duration="3641000" />
+      <workItem from="1694382330595" duration="619000" />
+      <workItem from="1694421635626" duration="7150000" />
+      <workItem from="1694447505313" duration="2039000" />
     </task>
     <servers />
   </component>

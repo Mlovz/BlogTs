@@ -4,6 +4,9 @@ import {Button, Card, Input, Text} from "../../components";
 import {AuthStateUserData} from "../../utils/typescript";
 import {validAuthData} from "../../utils/valid";
 import axios from 'axios'
+import {useAppDispatch} from "../../redux/store";
+import {register} from "../../redux/actions/authAction";
+import {useNavigate} from "react-router-dom";
 
 const RegisterPage = () => {
     const [userData, setUserData] = useState<AuthStateUserData>({
@@ -17,6 +20,9 @@ const RegisterPage = () => {
         password: '',
         cf_password: ''
     })
+
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setUserData({...userData, [e.target.name]: e.target.value})
@@ -33,11 +39,7 @@ const RegisterPage = () => {
 
         delete userData.cf_password
 
-        try {
-            const res = await axios.post('http://localhost:5000/api/register', userData)
-        }catch (err:any){
-            console.log(err.response.data.message)
-        }
+        dispatch(register(userData, navigate))
 
     }
 

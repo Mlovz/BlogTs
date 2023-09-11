@@ -6,16 +6,20 @@ import {useDispatch} from 'react-redux'
 import {AuthSchema} from './types/authTypes'
 import globalReducer from "./reducers/globalReducer";
 import {GlobalSchema} from "./types/globalTypes";
+import articleReducer from "./reducers/articleReducer";
+import {ArticleSchema} from "./types/articleTypes";
 
 
 const rootReducers = combineReducers({
     auth: authReducer,
-    global: globalReducer
+    global: globalReducer,
+    article: articleReducer
 })
 
 export interface StateSchema {
     auth: AuthSchema,
-    global: GlobalSchema
+    global: GlobalSchema,
+    article: ArticleSchema
 }
 
 export const store = createStore(rootReducers, composeWithDevTools(applyMiddleware(thunk)))

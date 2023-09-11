@@ -5,6 +5,7 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser'
 
 import authRoute from "./routes/authRoute.js";
+import articleRoute from "./routes/articleRoute.js";
 
 dotenv.config()
 
@@ -20,6 +21,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use('/api', authRoute)
+app.use('/api', articleRoute)
 
 const URL = process.env.URL
 mongoose.connect(URL)

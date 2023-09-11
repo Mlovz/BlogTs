@@ -2,12 +2,23 @@
   width: 100%;
   position: relative;
 }
-.input{
+.input {
   border-radius: 5px;
   background: #E8E8E8;
   padding: 13px 15px;
   width: 100%;
+  resize: none;
+  border: 1.5px solid transparent;
+  outline: none;
+  transition: all .2s;
+
+  &:focus{
+    border: 1.5px solid var(--red_500);
+    background: #fff;
+  }
+
 }
+
 
 .error{
   position: absolute;

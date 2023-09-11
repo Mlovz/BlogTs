@@ -1,11 +1,33 @@
 import axios from "axios";
 import {Dispatch} from 'redux'
 import {AuthStateUserData} from "../../utils/typescript";
-import {AUTH, AUTH_ERROR, AuthActionType, AuthType} from "../types/authTypes";
+import {AUTH, AUTH_ERROR, AuthActionType, AuthErrorType, AuthType} from "../types/authTypes";
 import {GlobalLoadingType, LOADING} from "../types/globalTypes";
 import {TOKEN_KEY} from "../../utils/localstorage";
 import {$api} from "../../api";
+import {NavigateFunction} from "react-router-dom";
 
+
+
+export const register = (userData: AuthStateUserData, navigate: NavigateFunction) => async(dispatch:Dispatch<GlobalLoadingType | AuthErrorType>) => {
+    try {
+        dispatch({type: LOADING, payload: true})
+
+        const res = await $api.post('/register', userData)
+
+
+        dispatch({type: LOADING, payload: false})
+
+        navigate('/login')
+
+    }catch (err: any){
+        dispatch({
+            type: AUTH_ERROR,
+            payload: err.response.data.message
+        })
+        dispatch({type: LOADING, payload: false})
+    }
+}
 
 export const login = (userData: AuthStateUserData) => async(dispatch: Dispatch<AuthType | GlobalLoadingType> ) => {
     try {
@@ -14,14 +36,15 @@ export const login = (userData: AuthStateUserData) => async(dispatch: Dispatch<A
 
         const res = await $api.post('/login', userData)
 
-        dispatch({
-            type: AUTH,
-            payload: {
-                user: res.data.user,
-                token: res.data.accessToken,
-                error: ''
-            }
-        })
+        //
+        // dispatch({
+        //     type: AUTH,
+        //     payload: {
+        //         user: res.data.user,
+        //         token: res.data.accessToken,
+        //         error: ''
+        //     }
+        // })
 
         dispatch({type: LOADING, payload: false})
 
@@ -42,8 +65,6 @@ export const refreshToken = () => async(dispatch: Dispatch<AuthType | GlobalLoad
 
     if(token) {
         try {
-
-
             dispatch({type: LOADING, payload: true})
 
             const res = await $api.get('/refreshToken')
@@ -66,5 +87,30 @@ export const refreshToken = () => async(dispatch: Dispatch<AuthType | GlobalLoad
             })
             dispatch({type: LOADING, payload: false})
         }
+    }
+}
+
+
+export const logout = () => async(dispatch: Dispatch<AuthType>) => {
+    try {
+
+        const res = await $api.get('/logout')
+
+
+        console.log(res)
+
+        dispatch({
+            type: AUTH,
+            payload: {
+                user: null,
+                token: '',
+                error: ''
+            }
+        })
+
+        localStorage.removeItem(TOKEN_KEY)
+
+    }catch (err: any){
+        console.log(err)
     }
 }
