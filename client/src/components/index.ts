@@ -6,6 +6,8 @@ export {default as Text} from './Text/Text'
 export {default as Button} from './Button/Button'
 export {default as Loading} from './Loading/Loading'
 export {default as ArticleCard} from './ArticleCard/ArticleCard'
+export {default as Avatar} from './Avatar/Avatar'
+export {default as FavoriteBtn} from './FavoriteBtn/FavoriteBtn'
 
 // import Alert from './Alert/Alert'
 // import Header from "./Header/Header";

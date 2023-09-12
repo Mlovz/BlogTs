@@ -10,11 +10,23 @@ interface ArticleCardProps{
     createdAt: Date,
     content: string,
     id: string
+    scrollTop?: boolean
 }
 
-const ArticleCard:FC<ArticleCardProps> = ({title, content, createdAt, id}) => {
+const ArticleCard:FC<ArticleCardProps> = ({title, content, createdAt, id, scrollTop}) => {
+    // const navigate =
+
+    const onScrollTop = () => {
+        if(scrollTop){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    }
+
     return (
-        <Link to={`/article/${id}`} className={cls.card}>
+        <Link to={`/article/${id}`} className={cls.card} onClick={onScrollTop}>
             <Text color='solid'>{sliceText(30, title)}</Text>
             <Text as='span' size={12} fw={500}>{createdAt.toString()}</Text>
             <Text as='p' size={16} fw={500}>{sliceText(100, content)}</Text>

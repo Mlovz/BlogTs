@@ -34,3 +34,54 @@ export const getArticles = async(req, res) => {
         console.log(err)
     }
 }
+
+export const getArticle = async(req, res) => {
+    try{
+        const article = await ArticleModel.findById({_id: req.params.id}).populate("user", "username avatar")
+
+        const articles = await ArticleModel.find({category: article.category}).limit(2)
+
+        const newData = articles.filter((item) => item._id !== article._id)
+
+        res.json({
+            article,
+            articles: newData
+        })
+
+    }catch (err){
+        console.log(err)
+    }
+}
+
+
+export const likePost = async(req ,res) => {
+    try{
+         await ArticleModel.findOneAndUpdate(
+            {_id: req.params.id},
+            {
+                $push: {likes: req.user._id}
+            }
+        )
+        res.json({
+            message: 'Like Post'
+        })
+    }catch (err){
+        console.log(err)
+    }
+}
+
+export const unlikePost = async(req ,res) => {
+    try{
+        await ArticleModel.findOneAndUpdate(
+            {_id: req.params.id},
+            {
+                $pull: {likes: req.user._id}
+            }
+        )
+        res.json({
+            message: 'Like Post'
+        })
+    }catch (err){
+        console.log(err)
+    }
+}
