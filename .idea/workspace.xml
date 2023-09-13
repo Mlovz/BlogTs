@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4649114-0dc7-45d7-a46d-966466229864" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/redux/selectors/article/getArticlePosts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ArticleCard/ArticleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ArticleCard/ArticleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/DetailArticlePage/DetailArticlePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/DetailArticlePage/DetailArticlePage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/DetailArticlePage/DetailArticlePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/DetailArticlePage/DetailArticlePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/ProfilePage/ProfilePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ProfilePage/ProfilePage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/ProfilePage/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ProfilePage/ProfilePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/actions/articleAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/actions/articleAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/articleReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/articleReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/types/articleTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/types/articleTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/articleCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/articleCtrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/articleRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/articleRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/ProfilePage/ProfileForm/ProfileForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ProfilePage/ProfileForm/ProfileForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/actions/authAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/actions/authAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/authReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/types/authTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/types/authTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/typescript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/typescript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/authCtrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/authCtrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/authRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/mesto/OneDrive/Рабочий стол/www/blogTs",
+    "last_opened_file_path": "C:/Users/mlovz/Desktop/www/BlogTs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,7 +49,7 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "fileTemplates",
     "settings.editor.splitter.proportion": "0.31303418",
-    "ts.external.directory.path": "C:\\Users\\mesto\\OneDrive\\Рабочий стол\\www\\blogTs\\client\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\mlovz\\Desktop\\www\\BlogTs\\client\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -119,6 +113,7 @@
       <workItem from="1694506592228" duration="4494000" />
       <workItem from="1694512921478" duration="99000" />
       <workItem from="1694513311547" duration="20000" />
+      <workItem from="1694625976432" duration="3181000" />
     </task>
     <servers />
   </component>

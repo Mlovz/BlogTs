@@ -35,7 +35,7 @@ const Header = () => {
                                 <div onClick={onOpen} className={cls.dropDown}>
                                     {
                                         authData.avatar
-                                            ? <img src={authData?.avatar} alt=""/>
+                                            ? <img src={authData?.avatar} alt="" className={cls.avatar}/>
                                             : <div className={cls.avatar}>{authData.username.slice(0, 1)}</div>
                                     }
 

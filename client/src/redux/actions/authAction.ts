@@ -1,12 +1,11 @@
-import axios from "axios";
 import {Dispatch} from 'redux'
-import {AuthStateUserData} from "../../utils/typescript";
-import {AUTH, AUTH_ERROR, AuthActionType, AuthErrorType, AuthType} from "../types/authTypes";
+import {AuthStateUserData, UpdateProfileStateData} from "../../utils/typescript";
+import {AUTH, AUTH_ERROR, AUTH_UPDATE, AuthErrorType, AuthType, AuthUpdateType, User} from "../types/authTypes";
 import {GlobalLoadingType, LOADING} from "../types/globalTypes";
 import {TOKEN_KEY} from "../../utils/localstorage";
 import {$api} from "../../api";
 import {NavigateFunction} from "react-router-dom";
-
+import {uploadImage} from "../../utils/uploadImage";
 
 
 export const register = (userData: AuthStateUserData, navigate: NavigateFunction) => async(dispatch:Dispatch<GlobalLoadingType | AuthErrorType>) => {
@@ -114,3 +113,41 @@ export const logout = () => async(dispatch: Dispatch<AuthType>) => {
         console.log(err)
     }
 }
+
+
+export const updateProfile =
+    (userData: UpdateProfileStateData, avatar: any,  auth: User | null) =>
+        async(dispatch: Dispatch<GlobalLoadingType | AuthUpdateType>) => {
+
+            let media: any = []
+
+            try {
+                dispatch({type: LOADING, payload: true})
+
+                if (avatar) {
+                    media = await uploadImage([avatar])
+                }
+
+                const newUser = {
+                    ...auth,
+                    ...userData,
+                    avatar: avatar ? media[0].url : auth?.avatar
+                }
+
+                delete newUser.password
+
+                const res = await $api.patch('/updateUser', newUser);
+
+                console.log(res)
+
+                dispatch({
+                    type: AUTH_UPDATE,
+                    payload: newUser
+                })
+                dispatch({type: LOADING, payload: false})
+
+            }catch (err: any){
+                console.log(err)
+                dispatch({type: LOADING, payload: false})
+            }
+        }

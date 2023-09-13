@@ -1,5 +1,6 @@
 export const AUTH = 'AUTH'
 export const AUTH_ERROR = 'AUTH_ERROR'
+export const AUTH_UPDATE = 'AUTH_UPDATE'
 
 
 export interface User {
@@ -30,6 +31,10 @@ export interface AuthErrorType{
     payload: string
 }
 
+export interface AuthUpdateType{
+    type: typeof AUTH_UPDATE,
+    payload: any
+}
 
 
-export type AuthType = AuthActionType | AuthErrorType
+export type AuthType = AuthActionType | AuthErrorType | AuthUpdateType

@@ -3,3 +3,11 @@ export interface AuthStateUserData{
     password: string
     cf_password?: string
 }
+
+
+export interface UpdateProfileStateData{
+    username: string,
+    email: string,
+    website:string,
+    story: string,
+}

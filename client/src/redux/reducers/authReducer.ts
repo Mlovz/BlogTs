@@ -1,4 +1,4 @@
-import {AUTH, AUTH_ERROR,  AuthSchema, AuthType} from "../types/authTypes";
+import {AUTH, AUTH_ERROR, AUTH_UPDATE, AuthSchema, AuthType} from "../types/authTypes";
 
 
 const initialState: AuthSchema = {
@@ -17,6 +17,13 @@ const authReducer = (state= initialState, action: AuthType ) => {
                 token: action.payload.token,
                 error: ''
             }
+
+        case AUTH_UPDATE:
+            return {
+                ...state,
+                user: action.payload
+            }
+
         case AUTH_ERROR:
             return {
                 ...state,
